@@ -25,6 +25,21 @@ A static leaderboard for RealMat-BaG
 
 [https://wang-hlin.github.io/realmat-leaderboard/](https://wang-hlin.github.io/realmat-leaderboard/)
 
+## Experiment Site
+
+This repo includes an experiment deployment workflow:
+
+- `.github/workflows/deploy-experiment.yml`
+- Trigger branch: `experiment`
+- Target: Cloudflare Pages project `realmat-leaderboard-experiment`
+
+Required repository secrets:
+
+- `CLOUDFLARE_API_TOKEN`
+- `CLOUDFLARE_ACCOUNT_ID`
+
+After setting the secrets, push to `experiment` to deploy an isolated experiment site URL.
+
 ## Data
 
 - Data file: `data/metrics_agg_filtered.csv`

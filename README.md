@@ -33,7 +33,7 @@ The repository already includes a workflow at `.github/workflows/deploy-pages.ym
 
 Then access:
 
-`https://wang-hlin.github.io/realmat-leaderboard/`
+[https://wang-hlin.github.io/realmat-leaderboard/](https://wang-hlin.github.io/realmat-leaderboard/)
 
 ## Data
 

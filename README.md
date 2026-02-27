@@ -21,17 +21,7 @@ A static leaderboard for RealMat-BaG
 └── data/
     └── metrics_agg_filtered.csv
 ```
-
-## Deploy to GitHub Pages
-
-The repository already includes a workflow at `.github/workflows/deploy-pages.yml`.
-
-1. Push code to the `main` branch
-2. Go to `Settings -> Pages` in the GitHub repository
-3. Set `Source` to `GitHub Actions`
-4. Wait for the Actions workflow to finish
-
-Then access:
+## Access
 
 [https://wang-hlin.github.io/realmat-leaderboard/](https://wang-hlin.github.io/realmat-leaderboard/)
 

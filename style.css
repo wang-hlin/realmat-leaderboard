@@ -36,6 +36,32 @@ body {
   line-height: 0.95;
 }
 
+.hero {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.submitEntryBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: #a04d16;
+  color: #fff8ee;
+  font-weight: 700;
+  text-decoration: none;
+  border: 1px solid #6f2f04;
+  white-space: nowrap;
+}
+
+.submitEntryBtn:hover {
+  background: #6f2f04;
+  border-color: #5f2804;
+}
+
 .hero p {
   margin-top: 8px;
   font-size: 15px;
@@ -74,6 +100,16 @@ body {
 .tabButton.active {
   background: var(--accent-soft);
   border-color: var(--accent);
+}
+
+#scenarioTabs .tabButton.active {
+  background: #ffe6c2;
+  border-color: #c56a1a;
+}
+
+#trainModeTabs .tabButton.active {
+  background: #e8f4ea;
+  border-color: #3f7f53;
 }
 
 .controls {
@@ -129,6 +165,116 @@ button:hover {
 .tableWrap {
   overflow: auto;
   max-height: 70vh;
+}
+
+.vizSection h2 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.vizTitle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.vizHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+#metricSelect {
+  min-width: 0;
+  width: auto;
+  padding: 4px 8px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ink);
+  background: var(--card);
+  border: 1.5px solid var(--line);
+  border-radius: 8px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: none;
+  box-shadow: none;
+  transition: border-color 120ms ease, background-color 120ms ease, color 120ms ease;
+}
+
+#metricSelect:hover {
+  border-color: #b89e7f;
+}
+
+#metricSelect:focus,
+#metricSelect:active {
+  outline: none;
+  border-color: #8f6d49;
+  background: #f5e7d1;
+}
+
+#metricSelect::-ms-expand {
+  display: none;
+}
+
+.vizLegend {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  font-size: 12px;
+  color: #3e4c59;
+  margin-left: auto;
+  justify-content: flex-end;
+}
+
+.legendItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.legendDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.preDot {
+  background: #0b4f6c;
+}
+
+.scratchDot {
+  background: #9eb2bc;
+  border-radius: 0;
+}
+
+.vizPlotWrap {
+  overflow-x: auto;
+}
+
+.errorbarSvg {
+  width: 100%;
+  min-width: 920px;
+  display: block;
+}
+
+.axisTick {
+  font-size: 11px;
+  fill: #52606d;
+}
+
+.axisLabel {
+  font-size: 11px;
+  fill: #1f2933;
+}
+
+.axisTitle {
+  font-size: 12px;
+  font-weight: 600;
+  fill: #1f2933;
 }
 
 .hidden {
@@ -242,6 +388,57 @@ tr:hover td {
 .metricStd {
   font-size: 11px;
   opacity: 0.78;
+}
+
+.vizEyeBtn {
+  border: none;
+  background: transparent;
+  color: #b9ae9b;
+  border-radius: 6px;
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  margin-right: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  line-height: 1;
+  cursor: pointer;
+  transition: color 120ms ease, border-color 120ms ease, background-color 120ms ease, opacity 120ms ease;
+}
+
+.vizEyeBtn svg {
+  width: 14px;
+  height: 14px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  display: block;
+}
+
+.vizEyeBtn.off {
+  opacity: 0.18;
+}
+
+.vizEyeBtn:hover {
+  color: #8f836f;
+  background: transparent;
+}
+
+.vizEyeBtn:focus-visible {
+  outline: none;
+  color: #857864;
+  background: transparent;
+}
+
+.vizEyeResetBtn {
+  color: #9f927f;
+  margin-right: 6px;
+  position: relative;
+  top: 0;
 }
 
 .medal-1 { background: linear-gradient(90deg, rgba(255,215,0,.2), transparent); }

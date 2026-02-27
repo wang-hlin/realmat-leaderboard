@@ -36,6 +36,32 @@ body {
   line-height: 0.95;
 }
 
+.hero {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.submitEntryBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: #a04d16;
+  color: #fff8ee;
+  font-weight: 700;
+  text-decoration: none;
+  border: 1px solid #6f2f04;
+  white-space: nowrap;
+}
+
+.submitEntryBtn:hover {
+  background: #6f2f04;
+  border-color: #5f2804;
+}
+
 .hero p {
   margin-top: 8px;
   font-size: 15px;

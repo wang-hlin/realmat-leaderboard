@@ -44,3 +44,17 @@ After setting the secrets, push to `experiment` to deploy an isolated experiment
 
 - Data file: `data/metrics_agg_filtered.csv`
 - The page loads and renders data fully on the client side (no backend required).
+
+## Temporary Evaluation API (Local Test)
+
+To test the `Submit New Model` flow with real metric calculation:
+
+```bash
+pip install -r backend/requirements.txt
+uvicorn backend.app:app --reload --port 8000
+```
+
+Then open:
+
+- `http://localhost:8000/index.html`
+- `http://localhost:8000/submit.html`

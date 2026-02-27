@@ -99,7 +99,9 @@ function toNum(v) {
 
 function fmt(v, d = 3) {
   const n = toNum(v);
-  return n === null ? '--' : n.toFixed(d);
+  if (n === null) return '--';
+  if (n > 100) return n.toExponential(d);
+  return n.toFixed(d);
 }
 
 function metricWithStd(meanV, stdV) {

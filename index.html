@@ -13,7 +13,6 @@
   <main class="page">
     <section class="hero">
       <h1>RealMat-BaG leaderboard</h1>
-      <a class="submitEntryBtn" href="./submit.html">Submit New Model</a>
     </section>
 
     <section class="tabs card">
@@ -48,21 +47,7 @@
         <thead>
           <tr>
             <th>Rank</th>
-            <th class="sortableTh" data-sort-key="method">
-              <button
-                id="showAllVizBtn"
-                type="button"
-                class="vizEyeBtn vizEyeResetBtn"
-                title="Show all methods in visulisation"
-                aria-label="Show all methods in visulisation"
-              >
-                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                  <path d="M20 6v5h-5"></path>
-                  <path d="M20 11a8 8 0 1 0 2 5.3"></path>
-                </svg>
-              </button>
-              Method
-            </th>
+            <th class="sortableTh" data-sort-key="method">Method</th>
             <th class="sortableTh" data-sort-key="scenario">Scenario</th>
             <th class="sortableTh" data-sort-key="mode">Mode</th>
             <th class="sortableTh" data-sort-key="test_mrae_mean">MRAE (std)</th>
@@ -72,21 +57,6 @@
         </thead>
         <tbody></tbody>
       </table>
-    </section>
-
-    <section id="errorbarSection" class="card vizSection">
-      <div class="vizHeader">
-        <h2 class="vizTitle">
-          <select id="metricSelect">
-            <option value="mrae">MRAE</option>
-            <option value="mae">MAE</option>
-            <option value="r2">R²</option>
-          </select>
-          visulisation
-        </h2>
-        <span id="errorbarLegend" class="vizLegend"></span>
-      </div>
-      <div id="errorbarPlotWrap" class="vizPlotWrap"></div>
     </section>
   </main>
 

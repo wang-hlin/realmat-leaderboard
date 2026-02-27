@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RealMat-BaG leaderboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <h1>RealMat-BaG leaderboard</h1>
+    </section>
+
+    <section class="tabs card">
+      <div id="scenarioTabs" class="tabRow" aria-label="Scenario Tabs"></div>
+      <div id="trainModeTabs" class="tabRow" aria-label="Training Mode Tabs"></div>
+    </section>
+
+    <section class="controls card">
+      <div class="control">
+        <label for="methodSearch">Method Search</label>
+        <input id="methodSearch" type="text" placeholder="e.g. CGCNN" />
+      </div>
+      <div class="actions">
+        <button id="resetBtn">Reset</button>
+        <button id="downloadBtn">Download Current CSV</button>
+      </div>
+    </section>
+
+    <section id="lomoHeatmapSection" class="card heatmapSection hidden">
+      <div class="heatmapHeader">
+        <h2>LOMO Category Heatmap (MRAE)</h2>
+        <span id="lomoHeatmapLegend" class="heatmapLegend"></span>
+      </div>
+      <p class="lomoExplain">
+        Leave-one-material-out (LOMO): materials are grouped by different categories. For each method, mean and std are computed across the 10 categories.
+      </p>
+      <div id="lomoHeatmapWrap" class="heatmapWrap"></div>
+    </section>
+
+    <section class="tableWrap card">
+      <table id="leaderboard">
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th class="sortableTh" data-sort-key="method">Method</th>
+            <th class="sortableTh" data-sort-key="scenario">Scenario</th>
+            <th class="sortableTh" data-sort-key="mode">Mode</th>
+            <th class="sortableTh" data-sort-key="test_mrae_mean">MRAE (std)</th>
+            <th class="sortableTh" data-sort-key="test_mae_mean">MAE (std)</th>
+            <th class="sortableTh" data-sort-key="test_r2_mean">R<sup>2</sup> (std)</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>

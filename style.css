@@ -1,0 +1,261 @@
+:root {
+  --bg: #f4efe6;
+  --ink: #1f2933;
+  --card: #fffaf2;
+  --line: #d9cbb7;
+  --accent: #b54708;
+  --accent-soft: #ffe8cc;
+  --medal-1: #ffd700;
+  --medal-2: #c0c0c0;
+  --medal-3: #cd7f32;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 0% 0%, #fff4dd 0%, transparent 30%),
+    radial-gradient(circle at 100% 100%, #ffe3bf 0%, transparent 30%),
+    var(--bg);
+}
+
+.page {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.hero h1 {
+  margin: 0;
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 1px;
+  font-size: clamp(48px, 8vw, 84px);
+  line-height: 0.95;
+}
+
+.hero p {
+  margin-top: 8px;
+  font-size: 15px;
+}
+
+.card {
+  border: 1px solid var(--line);
+  background: var(--card);
+  border-radius: 14px;
+  padding: 14px;
+  margin-top: 14px;
+}
+
+.tabs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tabRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tabButton {
+  font: inherit;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 8px 14px;
+  background: #fff;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.tabButton.active {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+}
+
+.controls {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(180px, 1fr));
+  gap: 10px;
+  align-items: end;
+}
+
+.control {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+label {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+select, input, button {
+  font: inherit;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 10px;
+  background: #fff;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+button {
+  cursor: pointer;
+  background: var(--accent-soft);
+  border-color: #f6c788;
+  font-weight: 700;
+}
+
+button:hover {
+  border-color: var(--accent);
+}
+
+.summary {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.tableWrap {
+  overflow: auto;
+  max-height: 70vh;
+}
+
+.hidden {
+  display: none;
+}
+
+.heatmapSection h2 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.heatmapHeader {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: baseline;
+  margin-bottom: 10px;
+}
+
+.heatmapLegend {
+  font-size: 12px;
+  color: #3e4c59;
+}
+
+.lomoExplain {
+  margin: 0 0 10px;
+  font-size: 13px;
+  line-height: 1.45;
+  color: #3e4c59;
+}
+
+.heatmapWrap {
+  overflow: auto;
+}
+
+.heatmapTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+  min-width: 820px;
+}
+
+.heatmapTable th,
+.heatmapTable td {
+  border: 1px solid var(--line);
+  padding: 6px 8px;
+  text-align: center;
+}
+
+.heatmapTable th:first-child,
+.heatmapTable td:first-child {
+  text-align: left;
+  position: sticky;
+  left: 0;
+  background: #fffaf2;
+  z-index: 1;
+}
+
+.heatmapTable th:last-child,
+.heatmapTable td:last-child {
+  font-weight: 700;
+  background: #fff4df;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  min-width: 980px;
+}
+
+thead th {
+  position: sticky;
+  top: 0;
+  background: #fff4df;
+  z-index: 1;
+}
+
+.sortableTh {
+  cursor: pointer;
+  user-select: none;
+}
+
+.sortableTh.sortedAsc::after {
+  content: "  ↑";
+  font-size: 11px;
+  opacity: 0.85;
+}
+
+.sortableTh.sortedDesc::after {
+  content: "  ↓";
+  font-size: 11px;
+  opacity: 0.85;
+}
+
+th, td {
+  border-bottom: 1px solid var(--line);
+  padding: 8px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+tr:hover td {
+  background: #fff5e9;
+}
+
+.rank {
+  font-weight: 700;
+}
+
+.metricStd {
+  font-size: 11px;
+  opacity: 0.78;
+}
+
+.medal-1 { background: linear-gradient(90deg, rgba(255,215,0,.2), transparent); }
+.medal-2 { background: linear-gradient(90deg, rgba(192,192,192,.18), transparent); }
+.medal-3 { background: linear-gradient(90deg, rgba(205,127,50,.18), transparent); }
+
+@media (max-width: 920px) {
+  .controls {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .controls {
+    grid-template-columns: 1fr;
+  }
+}

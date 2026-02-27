@@ -100,7 +100,7 @@ function toNum(v) {
 function fmt(v, d = 3) {
   const n = toNum(v);
   if (n === null) return '--';
-  if (n > 100) return n.toExponential(d);
+  if (Math.abs(n) > 100) return n.toExponential(d);
   return n.toFixed(d);
 }
 

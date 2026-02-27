@@ -25,6 +25,12 @@ A static leaderboard for RealMat-BaG
 
 [https://wang-hlin.github.io/realmat-leaderboard/](https://wang-hlin.github.io/realmat-leaderboard/)
 
+## Experiment Site
+
+[https://realmat-leaderboard-experiment.pages.dev/](https://realmat-leaderboard-experiment.pages.dev/)
+
+Includes experimental additions such as the `visulisation` panel and related UI interactions.
+
 ## Data
 
 - Data file: `data/metrics_agg_filtered.csv`
